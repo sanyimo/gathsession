@@ -1,0 +1,14 @@
+html * {
+    font-family: $primary-font;    
+    
+}
+ 
+body {
+    background-color: $bg-color;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 70px 100px;
+    color: $white;
+    width: 100vw;
+    min-height: 100vh;
+} 

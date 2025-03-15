@@ -1,0 +1,9 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    background-image: url(../img/ellipse.svg), url(../img/ellipse-big.svg);
+    background-repeat: no-repeat;
+    background-position: 108% 145%, 109% 280%;
+    background-size: 780px, 1010px;
+}

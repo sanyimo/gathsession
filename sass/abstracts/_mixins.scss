@@ -1,0 +1,39 @@
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+@mixin button($bg-color: $blue, $color: $white-bg) {
+    display: inline-block;
+    padding: 16px 34px;
+    color: $color;
+    background-color: $pink;
+    text-decoration: none;
+    border-radius: 28px;
+    position: relative;
+
+    &:hover {
+            background-color: lighten($bg-color, 10%);
+        }
+
+}

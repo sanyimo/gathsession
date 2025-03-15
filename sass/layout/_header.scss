@@ -1,0 +1,64 @@
+header {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 20px 0 0 ;
+    margin-top: -65px;
+    margin-bottom: 35px;
+    
+
+    .logo a {
+        width: 235px;
+        height: 45px;
+    }
+    .nav-principal {
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            li {
+                list-style: none;
+            }
+
+            a {
+                color: $grey;
+                text-decoration: none;
+                font-weight: 400;
+                padding: 10px 15px;
+                
+
+                &:hover {
+                    color: $white;
+                    text-decoration: underline $pink;
+                    text-underline-offset: 15px;
+                    transition: color 0.3s ease-in-out;
+                    
+                }
+                &.home {
+                    color: $white;
+                    padding-top: 3px;
+                    &:hover {
+                        color: $pink;
+                        text-decoration: underline $white;
+                        text-underline-offset: 15px;
+                    }
+                    &:after {
+                            content: '';
+                            width: 32px;
+                            height: 2px;
+                            background-color: $pink;
+                            display: block;
+                            margin-top: 9px;
+                            margin-left: 15px;
+                            
+                        }
+                }
+                
+            }
+        }
+    }
+}
+
+
