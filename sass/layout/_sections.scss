@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as v;
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 3rem;
+
+    .features {
+        display: flex;
+        justify-content: space-between;
+        gap: 2.5rem;
+        flex-wrap: nowrap;
+        width: 70%;
+
+        article {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(33.333% - 20px); // Tres artículos por fila
+            box-sizing: border-box;
+            padding: 3px;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline v.$white;
+                color: v.$pink;
+                text-underline-offset: 0.8rem;
+                transition: color 0.3s ease-in-out;
+            }
+
+            img {
+                width: 40;
+                max-width: 6rem;
+                height: auto;
+                padding: 0.5rem;
+                background-color: #4d4d4d;
+                border-radius: 1rem;
+                object-fit: cover;
+                margin-right: 0.8rem;
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-weight: 600;
+            }
+        }
+    }
+}

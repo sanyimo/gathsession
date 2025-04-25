@@ -1,0 +1,21 @@
+/* 1. Reset básico y base del documento*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Reseteo de márgenes y padding */
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+/* Establecer tamaño base de fuente */
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  min-height: 100%;
+}

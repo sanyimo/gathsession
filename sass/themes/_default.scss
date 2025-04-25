@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as v;
+
+html * {
+    font-family: v.$primary-font;
+    font-size: 1.8rem;
+}
+ 
+body {
+    min-width: 1920px;
+    max-width: 1920px;
+    height: 1080px;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+    background-image: url(../img/icons/ellipse.svg), url(../img/icons/ellipse-big.svg);
+    background-repeat: no-repeat;
+    background-position: right -3rem bottom 2rem, right -0.9rem bottom -11.5rem;
+    background-size: 51%, 37%;
+    background-color: v.$bg-color;
+    padding: 3rem 16rem;
+    color: v.$white;
+} 

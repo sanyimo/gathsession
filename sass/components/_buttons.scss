@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as v;
+
+.hero_button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    gap: 3rem;
+    margin-bottom: 10rem;
+
+    &-btn {
+        background-color: v.$pink;
+        color: v.$pure-white;
+        font-weight: 400;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+
+        &:hover {
+            background-color: lighten(v.$pink, 10%);
+        }
+    }
+
+    &-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: v.$white;
+
+        &:hover {
+            text-decoration: underline v.$pink;
+            text-underline-offset: 15px;
+        }
+    }
+}

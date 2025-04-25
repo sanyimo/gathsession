@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as v;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;    
+    margin-bottom: 12rem;
+
+    .logo a {
+        width: 23.5rem;
+        height: 4.5rem;
+    }
+    .nav-links {
+        display: flex;
+        gap: 4rem;
+        list-style: none;
+        align-items: center;
+        padding-left: 0;
+        padding-right: 4rem;
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: v.$grey;
+            text-decoration: none;
+            font-weight: 400;
+            padding: 1rem 1.5rem;                
+
+            &:hover {
+                color: v.$white;
+                text-decoration: underline v.$pink;
+                text-underline-offset: 1.5rem;
+                transition: color 0.3s ease-in-out;
+            }                               
+        }
+        .active {
+            color: v.$white;
+            position: relative;
+
+            &:hover {
+                color: v.$pink;
+                text-decoration: underline v.$white;
+                text-underline-offset: 1.5rem;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 3.2rem;
+                height: 2px;
+                background-color: v.$pink;
+                display: block;
+                margin-top: 0.9rem;
+                margin-left: 1.5rem;                        
+            }
+        } 
+    }    
+}

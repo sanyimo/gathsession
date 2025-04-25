@@ -1,0 +1,256 @@
+@charset "UTF-8";
+/* 1. Reset básico y base del documento*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Reseteo de márgenes y padding */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Establecer tamaño base de fuente */
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  min-height: 100%;
+}
+
+.hero_button {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+  gap: 3rem;
+  margin-bottom: 10rem;
+}
+.hero_button-btn {
+  background-color: #DB2A6B;
+  color: #FFFFFF;
+  font-weight: 400;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.hero_button-btn:hover {
+  background-color: #e25689;
+}
+.hero_button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #E1E1E1;
+}
+.hero_button-link:hover {
+  text-decoration: underline #DB2A6B;
+  text-underline-offset: 15px;
+}
+
+#grid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  gap: 3.2rem;
+  width: 100%;
+  height: 100%;
+}
+#grid #div1 {
+  grid-area: 1/1/5/3;
+  background-color: #6E1FED;
+  background-image: url(../img/handsome-serious-calm-guy-with-dark-skin-and-beard-2021-09-02-14-28-37-utc.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 100%;
+  border-radius: 8.5rem;
+  background-size: cover;
+}
+#grid #div2 {
+  grid-area: 5/1/7/3;
+  background-color: #DB2A6B;
+  background-image: url(../img/vertical-shot-of-young-european-woman-in-glasses-w-2021-08-31-09-20-19-utc.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  border-radius: 8.5rem;
+}
+#grid #div3 {
+  grid-area: 1/3/3/5;
+  background-color: #60D3D9;
+  background-image: url(../img/pretty-young-asian-woman-makes-meditating-gesture-2021-08-31-09-20-19-utc\ 1.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  border-radius: 8.5rem;
+}
+#grid #div4 {
+  grid-area: 3/3/7/5;
+  background-color: #FF7E29;
+  background-image: url(../img/positive-smiling-handsome-caucasian-man-looks-play-2021-08-31-09-20-19-utc\ 1.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 100%;
+  background-size: cover;
+  border-radius: 8.5rem;
+}
+#grid #div5 {
+  grid-area: 2/5/6/7;
+  background-color: #F4B840;
+  background-image: url(../img/positive-dark-skinned-woman-dressed-in-domestic-go-2021-09-02-14-29-01-utc.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 100%;
+  background-size: cover;
+  border-radius: 8.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 12rem;
+}
+.header .logo a {
+  width: 23.5rem;
+  height: 4.5rem;
+}
+.header .nav-links {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 4rem;
+}
+.header .nav-links li {
+  list-style: none;
+}
+.header .nav-links a {
+  color: #ABABAB;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 1rem 1.5rem;
+}
+.header .nav-links a:hover {
+  color: #E1E1E1;
+  text-decoration: underline #DB2A6B;
+  text-underline-offset: 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+.header .nav-links .active {
+  color: #E1E1E1;
+  position: relative;
+}
+.header .nav-links .active:hover {
+  color: #DB2A6B;
+  text-decoration: underline #E1E1E1;
+  text-underline-offset: 1.5rem;
+}
+.header .nav-links .active:after {
+  content: "";
+  position: absolute;
+  width: 3.2rem;
+  height: 2px;
+  background-color: #DB2A6B;
+  display: block;
+  margin-top: 0.9rem;
+  margin-left: 1.5rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero_title {
+  font-size: 8rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
+  font-family: "Merriweather", serif;
+  width: 90%;
+}
+.hero_subtitle {
+  font-size: 2.4rem;
+  opacity: 0.7;
+  margin-top: 0;
+  margin-bottom: 3.2rem;
+  width: 80%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  width: 100%;
+  max-height: 100%;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+.left-section .features {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: nowrap;
+  width: 70%;
+}
+.left-section .features article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  padding: 3px;
+}
+.left-section .features article:hover {
+  cursor: pointer;
+  text-decoration: underline #E1E1E1;
+  color: #DB2A6B;
+  text-underline-offset: 0.8rem;
+  transition: color 0.3s ease-in-out;
+}
+.left-section .features article img {
+  width: 40;
+  max-width: 6rem;
+  height: auto;
+  padding: 0.5rem;
+  background-color: #4d4d4d;
+  border-radius: 1rem;
+  object-fit: cover;
+  margin-right: 0.8rem;
+}
+.left-section .features article p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+}
+
+html * {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+}
+
+body {
+  min-width: 1920px;
+  max-width: 1920px;
+  height: 1080px;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  background-image: url(../img/icons/ellipse.svg), url(../img/icons/ellipse-big.svg);
+  background-repeat: no-repeat;
+  background-position: right -3rem bottom 2rem, right -0.9rem bottom -11.5rem;
+  background-size: 51%, 37%;
+  background-color: #2B2D38;
+  padding: 3rem 16rem;
+  color: #E1E1E1;
+}/*# sourceMappingURL=style.css.map */
